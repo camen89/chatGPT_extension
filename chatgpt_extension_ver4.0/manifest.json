@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "ChatGPT文字数カウンター",
+    "version": "4.0",
+    "description": "ChatGPTの回答文字数をリアルタイムでカウントします.回答の和の水量を右下に表示します.水量をペットボトルで表示します",
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://chatgpt.com/c/671d0d3e-3bcc-800c-916b-88e0b9831d56",
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js",
+                "p5.min.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["p5.min.js"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
