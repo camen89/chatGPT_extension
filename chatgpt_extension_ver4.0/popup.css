@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: black;
+}
+
+h1 {
+    color: white;
+}
+
+#count {
+    font-size: 2em;
+    color: white;
+}
+
+p{
+    color: white;
+}
